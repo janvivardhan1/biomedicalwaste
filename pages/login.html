@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>BioMedical Waste Management</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/general.css">
+    <link rel="stylesheet" href="../CSS/queries.css">
+    <link rel="stylesheet" href="../CSS/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+<!--  
+        <div class="top-bar">
+            <div class="search-bar"><input type="text"       placeholder="Search Here.......">
+            <a href=""><ion-icon class="s-icon" name="search-outline"></ion-icon></a></div>
+           <div class="nav-icons">
+          <div class="dropdown">
+         <ion-icon name="globe-outline" class="dropbtn"></ion-icon>
+        <div class="dropdown-content">
+        <a href="#"><strong>English</strong></a>
+        <a href="#"><strong>हिन्दी</strong></a>
+        </div>
+       </div>
+       </div>
+           <button class="lgn">Login</button>
+        </div> -->
+           <header class="header nav-bar">
+            <a href="../index.html" class="logo-link">
+            <img
+               class="logo"
+               alt="logo"
+               src="../Images/logo.png"
+               /> <div class="logo-desc">
+                  <h2 class="logo-hdng">Health care facility</h2>
+                  <h3>Address</h3>
+               </div>
+            </a>
+            <nav class="main-nav">
+               <ul class="main-nav-list">
+                   <div class="search-bar"><input type="text"placeholder="Search Here.......">
+            <a href=""><ion-icon class="s-icon" name="search-outline"></ion-icon></a></div>
+                  <li><a class="main-nav-link" href="../index.html">Home</a></li>
+                  <li><a class="main-nav-link" href="../index.html">Facility Details</a></li>
+                  <li><a class="main-nav-link" href="../pages/about.html">About Us</a></li>
+                  <li><a class="main-nav-link" href="../pages/contactus.html">Contact Us</a></li> 
+            
+           <div class="nav-icons">
+          <div class="dropdown">
+         <ion-icon name="globe-outline" class="dropbtn"></ion-icon>
+        <div class="dropdown-content">
+        <a href="#"><strong>English</strong></a>
+        <a href="#"><strong>हिन्दी</strong></a>
+        </div>
+       </div>
+       </div>
+           <a href="../pages/login.html" class="lgn" >Login</a>      
+              </ul>
+           </nav>
+    
+           <button class="btn-mobile-nav">
+               <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+               <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+            </button>
+     </header>
+
+     <section class="container text-center">
+            <h2 class="heading-secondary lgn-head center-text">Sign In for Managing the Bio Medical Waste</h2>
+          </section>
+         
+      <main class="login-container container  grid--2-cols">
+         <div class="hospital-image">
+            <img src="../Images/hero.png" alt="Hospital" />
+           <!-- <p class="tagline">Sign In for Managing the Bio Medical Waste</p> -->
+          </div>
+
+         <div class="login-box">
+          <h2><span class="icon">👤</span> Sign In</h2>
+          <form id="loginForm">
+          <label>Enter Username</label>
+          <input type="text" id="username" placeholder="Enter username" required>
+
+         <label>Enter Password</label>
+         <input type="password" id="password" placeholder="Enter password" required>
+
+         <label>Enter Captcha</label>
+          <div class="captcha-box">
+          <span id="captcha"></span>
+          <button type="button" onclick="generateCaptcha()">⟳</button>
+         </div>
+         <input type="text" id="captchaInput" placeholder="Enter Captcha" required>
+
+        <button type="submit" class="submit-btn">Login</button>
+      </form>
+    </div>
+  </main>
+   
+  
+     <footer class="footer">
+      <div class="footer-head">
+      <div class="container grid grid--footer">
+          <nav class="nav-col">
+               <p class="footer-heading">About Us</p>
+               <ul class="footer-nav">
+                  <li><a class="footer-link" href="#">Who We Are</a></li>
+                  <li><a class="footer-link" href="#">Our Team</a></li>
+                  <li><a class="footer-link" href="#">Our Case Studies</a></li>
+                  <li><a class="footer-link" href="#">Partner with us</a></li>
+                  <li><a class="footer-link" href="#">Careers</a></li>
+               </ul>
+            </nav>
+          <nav class="nav-col">
+               <p class="footer-heading">Quick Links</p>
+               <ul class="footer-nav">
+                  <li><a class="footer-link" href="#">Accessibility Statement</a></li>
+                  <li><a class="footer-link" href="#">Feedback</a></li>
+                  <li><a class="footer-link" href="#">Help</a></li>
+                  <li><a class="footer-link" href="#">Privacy Policy</a></li>
+                  <li><a class="footer-link" href="#">Terms & Conditions</a></li>
+               </ul>
+            </nav>
+             <div class="address-col">
+               <p class="footer-heading">Contact us</p>
+               <address class="contacts">
+                  <p class="address"><i class="fa-solid fa-location-dot"></i>&nbsp;
+                     Himalayan Tower, Mall Road, Shimla
+                     Himachal Pradesh, India – 171001
+                  </p>
+                  <p>
+                     <a class="footer-link" href="tel:415-201-6370"><i class="fa-solid fa-phone"></i>&nbsp;xxx-xxx-6370</a
+                        ><br />
+                     <a class="footer-link" href="mailto:hello@ushmawellness.com"
+                        ><i class="fa-solid fa-envelope"></i>&nbsp;hello@EarthKraft.com</a
+                        >
+                  </p>
+               </address>
+            </div>
+            </div>
+           <div class="footer-section">
+            <p class="footer-heading">Our Location</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3439.803227116451!2d77.6431526112076!3d30.4416795995351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f23824fa916db%3A0x67c9e32f58755378!2sIndian%20Institute%20Of%20Management%E2%80%93Sirmaur%20(IIM%E2%80%93Sirmaur)!5e0!3m2!1sen!2sin!4v1754194713188!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+      </div>
+      </div>
+       <div class="footer-bottom ">
+         <p class="container copyright">&copy; 2025 EarthKraft. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+      <ul class="social-links container">
+                  <li>
+                     <a class="footer-link" href="#"
+                        >
+                        <ion-icon class="social-icon" name="logo-instagram"></ion-icon
+                           >
+                     </a>
+                  </li>
+                  <li>
+                     <a class="footer-link" href="#"
+                        >
+                        <ion-icon class="social-icon" name="logo-facebook"></ion-icon
+                           >
+                     </a>
+                  </li>
+                  <li>
+                     <a class="footer-link" href="#"
+                        >
+                        <ion-icon class="social-icon" name="logo-twitter"></ion-icon
+                           >
+                     </a>
+                  </li>
+                   <li>
+                     <a class="footer-link" href="#"
+                        >
+                        <ion-icon class="social-icon" name="logo-linkedin"></ion-icon
+                           >
+                     </a>
+                  </li>
+                  <li>
+                     <a class="footer-link" href="#"
+                        >
+                        <ion-icon class="social-icon" name="logo-youtube"></ion-icon
+                           >
+                     </a>
+                  </li>
+                  <li>
+                     <a class="footer-link" href="#"
+                        >
+                        <ion-icon class="social-icon whatsapp" name="logo-whatsapp"></ion-icon
+                           >
+                     </a>
+                  </li>
+               </ul>
+    </div>
+
+     </footer>
+   
+    <script src="../JS/script.js"></script>
+</body>
+</html>

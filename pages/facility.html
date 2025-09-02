@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>BioMedical Waste Management</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/general.css">
+    <link rel="stylesheet" href="../CSS/queries.css">
+    <link rel="stylesheet" href="../CSS/pages.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+ 
+      <main class="dashboard">
+         <button class="btn-mobile-dsh">
+               <ion-icon class="icon-mobile-dsh" name="menu-outline"></ion-icon>
+               <ion-icon class="icon-mobile-dsh" name="close-outline"></ion-icon>
+            </button>
+       <div class="side-bar">
+         <header>
+         <div class="facility-name">
+            <h2>Facility Name</h2>
+         </div>
+        <!-- <i class="fa-solid fa-chevron-right toggle"></i> -->
+        </header>
+          <div class="side-menu">
+            <ul class="menu-list">
+               <li><a  class="menu-list-link" href="../pages/dashboard.html"><i class="fa-solid fa-border-all"></i>&nbsp;&nbsp;Dashboard</a></li>
+              <li ><a  class="menu-list-link" href="../pages/facility.html"><i class="fa-solid fa-calendar-week"></i>&nbsp;&nbsp;Add Facility Details</a></li>
+               <li ><a  class="menu-list-link" href="../pages/generatelabel.html"><i class="fa-solid fa-qrcode"></i>&nbsp;&nbsp;Generate Label</a></li>
+               <li><a  class="menu-list-link" href="../pages/training.html"><i class="fa-solid fa-book-open"></i>&nbsp;&nbsp;Training Material</a></li>
+               <li><a  class="menu-list-link" href="../pages/report.html"><i class="fa-solid fa-file"></i>&nbsp;&nbsp;Annual Report</a></li>
+            </ul>
+          </div>
+         </div>
+       <div class="dsh-main">
+         <div class="dsh-nav">
+         <div class="dsh-heading">
+            <p>Facility Details</p>
+         </div>
+          <div class="dsh-heading-side">
+              <div class="search-bar" id="search_bar"><input type="text" placeholder="Search Here.......">
+              <a href="#search_bar"><ion-icon class="s-icon" name="search-outline"></ion-icon></a></div>
+               <div class="nav-icons">
+                <div class="dropdown">
+               <ion-icon name="globe-outline" class="dropbtn"></ion-icon>
+               <div class="dropdown-content">
+              <a href="#"><strong>English</strong></a>
+              <a href="#"><strong>हिन्दी</strong></a>
+            </div>
+           </div>
+           </div>
+           <div class="date-container">
+              <input type="date" id="dateInput" placeholder="Date Select">
+          </div>
+          </div>
+          </div>
+           <div class="container center-text">
+            <span class="subheading">WELCOME TO BIOMEDICAL WASTE MANAGEMENT</span>
+            <h2 class="label-heading">
+            DETAILS OF FACILITY TO BE PUBLISH ON THE ANNUAL REPORT
+            </h2>
+        </div>
+        
+        <!--  <div class="fclt-dtl-cont ">
+             <h2 class="center-text sub-heading">Enter Facility Details</h2>
+            <div class="detail-form form-grid">
+                <form action=""class="form-section form-grid grid-form-2-cols">
+                  <div class="form-part-1">
+                     <div>
+                    <label for="applicant-name">Name of the  Proprietor</label>
+                    <input type="text" id="applicant-name" class="faclt-inp" placeholder="Enter applicant Name" required>
+                  </div>
+                  <div>
+                    <label for="hcf-name">Name of the HCF</label>
+                    <input type="text" id="hcf-name" placeholder="eg:- Sunrise Multispeciality Hospital " required>
+                  </div>
+                  <div >
+                    <label for="hcf-add">Address of HCF</label>
+                   <textarea name="hcf-add" class="hcf-add" placeholder="Enter Correspondence address" required></textarea> 
+                  </div>
+                  <div>
+                    <label for="crr-add">Correspondence Address</label>
+                    <textarea name="crr-add" id="crr-add" class="crr-addr" placeholder="Enter Correspondence address" required></textarea>  
+                  </div>
+                  <div>
+                    <label for="tel-no">Telephone/Fax Number</label>
+                    <input type="number" id="tel-no" placeholder="Enter Quantity" required>
+                  </div>
+                  <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="admin@sunrisehospital.in" required>
+                  </div>
+                   </div>
+                    <div class="form-part-1">
+                  <div>
+                    <label for="website">Website Address</label>
+                    <input type="text" id="website" placeholder="www.sunrisehospital.in" required>
+                  </div>
+                  <div>
+                    <label for="autho">Activity for which authorisation is Grunted <i>&#40; tick all that apply&#41;</i>
+                    <div class="checkbox-group form-grid grid-form-2-cols ">
+                     <div class="checkbox-auth">
+                        <input type="checkbox" id="agree-terms">
+                        <label for="agree-terms">Generation</label>
+                     </div>
+                     <div class="checkbox-auth">
+                        <input type="checkbox" id="agree-terms">
+                        <label for="agree-terms">Collection</label> 
+                      </div>
+                     <div class="checkbox-auth">
+                        <input type="checkbox" id="agree-terms">
+                        <label for="agree-terms">Storage</label>
+                      </div>
+                     <div class="checkbox-auth">
+                        <input type="checkbox" id="agree-terms">
+                        <label for="agree-terms">Treatment</label>
+                     </div>
+                    </div>
+                    </label>
+                  </div>
+                  <div>
+                    <label for="auth-date">Date of validation of Authorisation<label>
+                    <input type="number" id="auth-no" placeholder="Enter date of validation of authorisation">
+                  </div>
+                  <div>
+                    <label for="auth-pdf">Upload Authorisation Form</label>
+                    <input type="file" id="auth-pdf" value="pdf">
+                  </div> -->
+                  <!-- <div class="select-opt">
+                    <label for="app-type">Type of Application</label>
+                    <select name="app-type" id="app-type">
+                       <option value="">---Select Application Type---</option>
+                    <option value="fresh">Fresh</option>
+                    <option value="renewal">Renewal</option>
+                    </select>
+                  </div> -->
+                  <!-- <div class="form-grid grid-form-2-cols"> -->
+                  <!-- <div>
+                    <label for="auth-no">Previous Authorisation No.<i>&#40;if renewal&#41;</i></label>
+                    <input type="number" id="auth-no" placeholder="Enter authorisation number">
+                  </div>
+                  <div>
+                     <label for="auth-date">Previous Authorisation date<i>&#40;if renewal&#41;</i></label>
+                     <input type="date" id="auth-date" placeholder="Enter authorisation date">
+                  </div> -->
+                  <!-- </div> -->
+                <!-- <div class="form-grid grid-form-2-cols"> -->
+                  <!-- <div class="select-opt">
+                    <label for="cte/cto">Applied for CTE/CTO</label>
+                    <select name="cte/cto" id="cte/cto">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    </select>
+                  </div> -->
+                  <!-- <div class="select-opt">
+                    <label for="status-wtr-act">Status under Water Act</label>
+                    <select name="status-udr-wtr-act" id="status-wtr-act">
+                    <option value="Applied">Applied</option>
+                    <option value="Granted">Granted</option>
+                    <option value="not-applicable">Not Applicable</option>
+                    </select>
+                  </div> -->
+                  <!-- </div> -->
+                  <!-- <div class="select-opt">
+                    <label for="status-air-act">Status under Air Act</label>
+                    <select name="status-udr-air-act" id="status-air-act">
+                    <option value="Applied">Applied</option>
+                    <option value="Granted">Granted</option>
+                    <option value="not-applicable">Not Applicable</option>
+                    </select>
+                  </div> -->
+                    <!-- <div>
+                    <label for="gps-cord">Website Address</label>
+                    <input type="text" id="gps-cord" placeholder="Latitude:XX.XXXX , Longitude:YY.YYYY" required>
+                  </div> -->
+                 <!-- <div class="form-grid grid-form-2-cols"> -->
+                  <!-- <div>
+                    <label for="no-of-beds">Number of Beds</label>
+                    <input type="number" id="no-of-beds" placeholder="Enter Total number of beds" required>
+                  </div> -->
+                   <!-- <div>
+                    <label for="no-of-patients">Number of Patients Treated Monthly</label>
+                    <input type="number" id="no-of-beds" placeholder="Enter Total number of Treated Monthly " required>
+                  </div> -->
+                  <!-- </div>
+                 <div class="form-grid grid-form-2-cols"> -->
+                  <!-- <div>
+                    <label for="no-of-hcf-covered">Number of HCFs Covered </label>
+                    <input type="number" id="no-of-hcf-covered" placeholder="Enter Number of HCFs Covered" required>
+                  </div>
+                   <div>
+                    <label for="no-of-beds-covered">Number of Beds Covered</label>
+                    <input type="number" id="no-of-beds-covered" placeholder="Enter Total number of Beds Covered " required>
+                  </div> -->
+                  <!-- </div> -->
+                   <!-- <div>
+                    <label for="area-covered">Area or Distance Covered</label>
+                    <input type="number" id="area-covered" placeholder="eg:- 80 Km radius" required>
+                  </div> -->
+                 <!-- <div class="form-grid grid-form-2-cols"> -->
+                  <!-- <div>
+                    <label for="trmt-cpt">Treatment Capacity&#40;Kg/day&#41;</label>
+                    <input type="number" id="trmt-cpt" placeholder="Enter treatment Capacity(kg/day)" required>
+                  </div>
+                   <div>
+                    <label for="qty-trt-dsp">Quantity Treated or Disposed&#40;Kg/day&#41;</label>
+                    <input type="number" id="qty-trt-dsp" placeholder="Enter Quantity Treated or Disposed (kg/day)"  required>
+                  </div> -->
+                  <!-- </div> -->
+                  <!-- <div class="form-grid grid-form-2-cols">
+                  <div>
+                    <label for="yll-wst">Yellow waste&#40;Kg/day&#41;</label>
+                    <input type="number" id="yll-wst" placeholder="Enter yellow waste(kg/day)" required>
+                  </div>
+                   <div>
+                    <label for="red-wst">Red Waste&#40;Kg/day&#41;</label>
+                    <input type="number" id="red-wst" placeholder="Enter red waste (kg/day)"  required>
+                  </div>
+                  </div>
+                  <div class="form-grid grid-form-2-cols">
+                  <div>
+                    <label for="white-wst">White Waste&#40;Kg/day&#41;</label>
+                    <input type="number" id="white-wst" placeholder="Enter white waste (kg/day)" required>
+                  </div>
+                   <div>
+                    <label for="blue-wst">Blue Waste &#40;Kg/day&#41;</label>
+                    <input type="number" id="blue-wst" placeholder="Enter blue waste (kg/day)"  required>
+                  </div>
+                  </div>
+                  <div>
+                    <label for="trans-mode">Mode of Transportation</label>
+                    <input type="number" id="trans-mode" placeholder="Enter Mode of Transportation" required>
+                  </div>
+                   <div>
+                    <label for="trmt-eqp">Treatment Equipment&#40;No. & Capacity&#41;</label>
+                    <input type="text" id="trmt-eqp" placeholder="2 Autoclaves(50kg/hr),1 incinerator(100kg/hr),etc." required>
+                  </div>
+                  <div>
+                    <label for="cont-plan">Contingency Plan&#40;for CBMWTF&#41;</label>
+                    <input type="text" id="cont-plan" placeholder="Attached separately" required>
+                  </div>
+                   <div>
+                    <label for="legal-actions">Past Legal Actions or Notices&#40;if any otherwise type none&#41;</label>
+                    <input type="text" id="legal-actions" placeholder="Mention details" required>
+                  </div> -->
+                    <!-- <div class="checkbox-group">
+                        <input type="checkbox" id="agree-terms" name="agreeaterms">
+                        <label for="agree-terms">I hereby declare the information provided is true.</label>
+                    </div>
+                 <div>
+                 <label for="digital-sign">Signature</label>
+                 <input type="text" id="digital-sign" placeholder="Write your Name">
+                 </div>
+                   <button type="submit" class="btnl btn-rpt">Generate Report</button>
+               </form> -->
+            <!-- </div> -->
+         <!-- </div>
+         </div> -->
+           <div class="fclt-dtl-cont ">
+             <h2 class="center-text sub-heading">Enter Facility Details</h2>
+            <div class="detail-form form-part-1 ">
+                <form action=""class="form-section ">
+                        <div class="form-grid grid-form-2-cols">
+                     <div>
+                    <label for="applicant-name">Name of the  Proprietor</label>
+                    <input type="text" id="applicant-name" class="faclt-inp" placeholder="Enter applicant Name" required>
+                  </div>
+                  <div>
+                    <label for="hcf-name">Name of the HCF</label>
+                    <input type="text" id="hcf-name" placeholder="eg:- Sunrise Multispeciality Hospital " required>
+                  </div>
+                  </div>
+                  <div >
+                    <label for="hcf-add">Address of HCF</label>
+                   <textarea name="hcf-add" class="hcf-add" placeholder="Enter Correspondence address" required></textarea> 
+                  </div>
+                  <div>
+                    <label for="crr-add">Correspondence Address</label>
+                    <textarea name="crr-add" id="crr-add" class="crr-addr" placeholder="Enter Correspondence address" required></textarea>  
+                  </div>
+                 <div class="form-grid grid-form-2-cols">
+                  <div>
+                    <label for="tel-no">Telephone/Fax Number</label>
+                    <input type="number" id="tel-no" placeholder="Enter Quantity" required>
+                  </div>
+                  <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="admin@sunrisehospital.in" required>
+                  </div>
+                  </div>
+                  <div>
+                    <label for="website">Website Address</label>
+                    <input type="text" id="website" placeholder="www.sunrisehospital.in" required>
+                  </div>
+                  <div>
+                    <label for="autho">Activity for which authorisation is Guaranteed <i>&#40; tick all that apply&#41;</i>
+                    <div class="checkbox-group form-grid grid-form-2-cols ">
+                     <div class="checkbox-auth">
+                        <input type="checkbox" id="agree-terms">
+                        <label for="agree-terms">Generation</label>
+                     </div>
+                     <div class="checkbox-auth">
+                        <input type="checkbox" id="agree-terms">
+                        <label for="agree-terms">Collection</label> 
+                      </div>
+                     <div class="checkbox-auth">
+                        <input type="checkbox" id="agree-terms">
+                        <label for="agree-terms">Storage</label>
+                      </div>
+                     <div class="checkbox-auth">
+                        <input type="checkbox" id="agree-terms">
+                        <label for="agree-terms">Treatment</label>
+                     </div>
+                    </div>
+                    </label>
+                  </div>
+                  <div class="form-grid grid-form-2-cols">
+                  <div>
+                    <label for="auth-date">Date of validation of Authorisation<label>
+                    <input type="date" id="auth-no" value="auth-no" placeholder="Enter date of validation of authorisation">
+                  </div>
+                  <div>
+                    <label for="auth-pdf">Upload Authorisation Form</label>
+                    <input type="file" id="auth-pdf" value="pdf">
+                  </div>
+                 </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agree-terms" name="agreeaterms">
+                        <label for="agree-terms">I hereby declare the information provided is true.</label>
+                    </div>
+                 <div>
+                 <label for="digital-sign">Signature</label>
+                 <input type="text" id="digital-sign" placeholder="Write your Name">
+                 </div>
+                   <button type="submit" class="btnl btn-rpt">Generate Report</button>
+               </form>
+         </div>
+         </div>
+         </div>
+      </main>
+     
+     <footer class="footer" style="margin-top: 0;" >
+      <div class="footer-head">
+      <div class="container grid grid--footer">
+          <nav class="nav-col">
+               <p class="footer-heading">About Us</p>
+               <ul class="footer-nav">
+                  <li><a class="footer-link" href="#">Who We Are</a></li>
+                  <li><a class="footer-link" href="#">Our Team</a></li>
+                  <li><a class="footer-link" href="#">Our Case Studies</a></li>
+                  <li><a class="footer-link" href="#">Partner with us</a></li>
+                  <li><a class="footer-link" href="#">Careers</a></li>
+               </ul>
+            </nav>
+          <nav class="nav-col">
+               <p class="footer-heading">Quick Links</p>
+               <ul class="footer-nav">
+                  <li><a class="footer-link" href="#">Accessibility Statement</a></li>
+                  <li><a class="footer-link" href="#">Feedback</a></li>
+                  <li><a class="footer-link" href="#">Help</a></li>
+                  <li><a class="footer-link" href="#">Privacy Policy</a></li>
+                  <li><a class="footer-link" href="#">Terms & Conditions</a></li>
+               </ul>
+            </nav>
+             <div class="address-col">
+               <p class="footer-heading">Contact us</p>
+               <address class="contacts">
+                  <p class="address"><i class="fa-solid fa-location-dot"></i>&nbsp;
+                     Himalayan Tower, Mall Road, Shimla
+                     Himachal Pradesh, India – 171001
+                  </p>
+                  <p>
+                     <a class="footer-link" href="tel:415-201-6370"><i class="fa-solid fa-phone"></i>&nbsp;xxx-xxx-6370</a
+                        ><br />
+                     <a class="footer-link" href="mailto:hello@ushmawellness.com"
+                        ><i class="fa-solid fa-envelope"></i>&nbsp;hello@EarthKraft.com</a
+                        >
+                  </p>
+               </address>
+            </div>
+            </div>
+           <div class="footer-section">
+            <p class="footer-heading">Our Location</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3439.803227116451!2d77.6431526112076!3d30.4416795995351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f23824fa916db%3A0x67c9e32f58755378!2sIndian%20Institute%20Of%20Management%E2%80%93Sirmaur%20(IIM%E2%80%93Sirmaur)!5e0!3m2!1sen!2sin!4v1754194713188!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+      </div>
+       <div class="footer-bottom">
+         <p class="container copyright">&copy; 2025 EarthKraft. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+      <ul class="social-links container">
+                  <li>
+                     <a class="footer-link" href="#"
+                        >
+                        <ion-icon class="social-icon" name="logo-instagram"></ion-icon
+                           >
+                     </a>
+                  </li>
+                  <li>
+                     <a class="footer-link" href="#"
+                        >
+                        <ion-icon class="social-icon" name="logo-facebook"></ion-icon
+                           >
+                     </a>
+                  </li>
+                  <li>
+                     <a class="footer-link" href="#"
+                        >
+                        <ion-icon class="social-icon" name="logo-twitter"></ion-icon
+                           >
+                     </a>
+                  </li>
+                   <li>
+                     <a class="footer-link" href="#"
+                        >
+                        <ion-icon class="social-icon" name="logo-linkedin"></ion-icon
+                           >
+                     </a>
+                  </li>
+                  <li>
+                     <a class="footer-link" href="#"
+                        >
+                        <ion-icon class="social-icon" name="logo-youtube"></ion-icon
+                           >
+                     </a>
+                  </li>
+                  <li>
+                     <a class="footer-link" href="#"
+                        >
+                        <ion-icon class="social-icon whatsapp" name="logo-whatsapp"></ion-icon
+                           >
+                     </a>
+                  </li>
+               </ul>
+    </div>
+     </footer>
+     <script src="../JS/general.js"></script>
+    <script src="../JS/script.js"></script>
+</body>
+</html>
