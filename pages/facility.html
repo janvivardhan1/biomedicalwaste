@@ -265,55 +265,55 @@
              <h2 class="center-text sub-heading">Enter Facility Details</h2>
             <div class="detail-form form-part-1 ">
                 <form action=""class="form-section ">
-                        <div class="form-grid grid-form-2-cols">
+                    <div class="form-grid grid-form-2-cols">
                      <div>
                     <label for="applicant-name">Name of the  Proprietor</label>
-                    <input type="text" id="applicant-name" class="faclt-inp" placeholder="Enter applicant Name" required>
+                    <input type="text" id="applicant-name" class="form-control" placeholder="eg:- Dr. A.K. Sharma" required>
                   </div>
                   <div>
                     <label for="hcf-name">Name of the HCF</label>
-                    <input type="text" id="hcf-name" placeholder="eg:- Sunrise Multispeciality Hospital " required>
+                    <input type="text" id="hcf-name" class="form-control" placeholder="eg:- Sunrise Multispeciality Hospital " required>
                   </div>
                   </div>
-                  <div >
+                  <div>
                     <label for="hcf-add">Address of HCF</label>
-                   <textarea name="hcf-add" class="hcf-add" placeholder="Enter Correspondence address" required></textarea> 
+                   <textarea name="hcf-add"  class="form-control" placeholder="eg:-NH-5, Sector 12, Shimla, HP – 171001" required></textarea> 
                   </div>
                   <div>
                     <label for="crr-add">Correspondence Address</label>
-                    <textarea name="crr-add" id="crr-add" class="crr-addr" placeholder="Enter Correspondence address" required></textarea>  
+                    <textarea name="crr-add" id="crr-add" class="form-control" placeholder="eg:-NH-5, Sector 12, Shimla, HP – 171001" required></textarea>  
                   </div>
                  <div class="form-grid grid-form-2-cols">
                   <div>
                     <label for="tel-no">Telephone/Fax Number</label>
-                    <input type="number" id="tel-no" placeholder="Enter Quantity" required>
+                    <input type="number" id="tel-no" class="form-control" placeholder="Tel: 0177-123456, Fax: 0177-654321" required>
                   </div>
                   <div>
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="admin@sunrisehospital.in" required>
+                    <input type="email" id="email" class="form-control" placeholder="admin@sunrisehospital.in" required>
                   </div>
                   </div>
                   <div>
                     <label for="website">Website Address</label>
-                    <input type="text" id="website" placeholder="www.sunrisehospital.in" required>
+                    <input type="text" id="website" class="form-control" placeholder="www.sunrisehospital.in" required>
                   </div>
                   <div>
                     <label for="autho">Activity for which authorisation is Guaranteed <i>&#40; tick all that apply&#41;</i>
                     <div class="checkbox-group form-grid grid-form-2-cols ">
                      <div class="checkbox-auth">
-                        <input type="checkbox" id="agree-terms">
+                        <input type="checkbox" class="form-control" id="agree-terms">
                         <label for="agree-terms">Generation</label>
                      </div>
                      <div class="checkbox-auth">
-                        <input type="checkbox" id="agree-terms">
+                        <input type="checkbox" class="form-control" id="agree-terms">
                         <label for="agree-terms">Collection</label> 
                       </div>
                      <div class="checkbox-auth">
-                        <input type="checkbox" id="agree-terms">
+                        <input type="checkbox" class="form-control" id="agree-terms">
                         <label for="agree-terms">Storage</label>
                       </div>
                      <div class="checkbox-auth">
-                        <input type="checkbox" id="agree-terms">
+                        <input type="checkbox" class="form-control" id="agree-terms">
                         <label for="agree-terms">Treatment</label>
                      </div>
                     </div>
@@ -322,20 +322,20 @@
                   <div class="form-grid grid-form-2-cols">
                   <div>
                     <label for="auth-date">Date of validation of Authorisation<label>
-                    <input type="date" id="auth-no" value="auth-no" placeholder="Enter date of validation of authorisation">
+                    <input type="date" id="auth-no" class="form-control" value="auth-no" placeholder="Enter date of validation of authorisation">
                   </div>
                   <div>
                     <label for="auth-pdf">Upload Authorisation Form</label>
-                    <input type="file" id="auth-pdf" value="pdf">
+                    <input type="file" id="auth-pdf" class="form-control" value="pdf">
                   </div>
                  </div>
                     <div class="checkbox-group">
-                        <input type="checkbox" id="agree-terms" name="agreeaterms">
+                        <input type="checkbox" id="agree-terms" name="agree-terms" class="form-control">
                         <label for="agree-terms">I hereby declare the information provided is true.</label>
                     </div>
                  <div>
-                 <label for="digital-sign">Signature</label>
-                 <input type="text" id="digital-sign" placeholder="Write your Name">
+                 <label for="digital-sign">Upload Signature</label>
+                 <input type="file" id="digital-sign" class="form-control" placeholder="upload your Name">
                  </div>
                    <button type="submit" class="btnl btn-rpt">Generate Report</button>
                </form>

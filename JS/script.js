@@ -71,30 +71,31 @@ window.onload = generateCaptcha;
 
 
 //label generator
-function generateLabel() {
-document.getElementById('prevFacility').innerText = document.getElementById('fclt-name').value;
-document.getElementById('prevWaste').innerText = document.getElementById('wst-ctg').value;
-document.getElementById('prevQuantity').innerText = document.getElementById('wst-qty').value;
+// function generateLabel() {
+// document.getElementById('prevFacility').innerText = document.getElementById('fclt-name').value;
+// document.getElementById('prevWaste').innerText = document.getElementById('wst-ctg').value;
+// document.getElementById('prevQuantity').innerText = document.getElementById('wst-qty').value;
 
 
-let qrText = `Facility: ${document.getElementById('fclt-name').value}\nWaste: ${document.getElementById('wst-ctg').value}\nQuantity: ${document.getElementById('wst-ctg').value} kg`;
+// let qrText = `Facility: ${document.getElementById('fclt-name').value}\nWaste: ${document.getElementById('wst-ctg').value}\nQuantity: ${document.getElementById('wst-ctg').value} kg`;
 
 
-document.getElementById('qrcode').innerHTML = "";
-new QRCode(document.getElementById('qrcode'), qrText);
-}
+// document.getElementById('qrcode').innerHTML = "";
+// new QRCode(document.getElementById('qrcode'), qrText);
+// }
 
-function downloadQR() {
-  // Find QR code inside the div
-  let qrImg = document.querySelector("#qrcode img"); 
-  // } else 
-    if (qrImg) {
-    let link = document.createElement("a");
-    link.download = "qrcode.png";
-    link.href = qrImg.src;
-    link.click();
-  } else {
-    alert("QR code not found!");
-  }
-}
+// function downloadQR() {
+//   // Find QR code inside the div
+//   let qrImg = document.querySelector("#qrcode img"); 
+//   // } else 
+//     if (qrImg) {
+//     let link = document.createElement("a");
+//     link.download = "qrcode.png";
+//     link.href = qrImg.src;
+//     link.click();
+//   } else {
+//     alert("QR code not found!");
+//   }
+// }
+
 

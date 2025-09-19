@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
  
@@ -65,7 +64,7 @@
           <div class="container center-text">
             <span class="subheading">WELCOME TO BIOMEDICAL WASTE MANAGEMENT</span>
             <h2 class="label-heading">
-                GENERATE LABEL FOR BIOMEDICAL WASTE CONTAINER
+                GENERATE LABEL
             </h2>
         </div>
           <div class="label-gen-cont form-grid grid-form-2-cols">
@@ -74,36 +73,53 @@
                 <form action=""class="form-section">
                   <div>
                     <label for="fclt-name">Facility-name</label>
-                    <input type="text" id="fclt-name" placeholder="Enter Facility Name" required>
+                    <input type="text" id="fclt-name" name="fclt-name" class="form-control" placeholder="ABC Hospital" readonly>
                   </div>
                   <div >
                     <label for="fclt-add">Facility Address</label>
-                    <textarea class="fclt-add" placeholder="Enter facility address" required></textarea>
+                    <textarea  id="facility-add" name="facility-add"class="form-control" readonly>NH-5,Sector 12,Shimla,HP-171001</textarea>
                   </div>
+                   <div class="form-grid grid-form-2-cols">
                   <div>
-                    <label for="dt">Date</label>
-                    <input type="date" id="dt" required>
+                      <label for="dateField">Date</label>
+                        <input type="date" id="dateField" class="form-control" name="dateField">
                   </div>
                    <div>
                     <label for="dt-gen">HCF Number</label>
-                    <input type="number" id="hcf-num"placeholder="Enter HCF Number" required>
+                    <input type="number" id="hcf-num" name="hcf-num" class="form-control" placeholder="Enter HCF number" required >
                   </div>
+                  </div>
+                   <div class="form-grid grid-form-2-cols">
                   <div class="select-opt">
+                <label for="wasteCategory">Select Waste Category</label>
+                 <select id="wasteCategory" class="form-control">
+                <option value="">--- Select Waste Category ---</option>
+                <option value="yellow">Yellow</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="white">White</option>
+              </select>
+                  </div>
+             
+                  <div class="select-opt">
+                <label for="subCategory">Select Sub-Category</label>
+                <select id="subCategory" class="form-control">
+                <option value="">--- Select Sub-Category ---</option>
+               </select>
+                  </div>
+                  </div>
                      <div>
-                    <label for="wst-ctg">Waste Category</label>
-                    <select name="wst-ctg" id="wst-ctg">
-                      <option value="">---Select Waste Category---</option>
-                      <option value="yll">Yellow</option>
-                      <option value="red">Red</option>
-                      <option value="white">White</option>
-                      <option value="blue">Blue</option>
-                    </select>
-                    </div>
-                    </div>
-               </form>
-            </div>
-            <div class="preview-section">
-              <h3>Label Preview</h3>
+                    <label for="wst-qty">Quantity(Kg/Day)</label>
+                    <input type="number" id="wst-qty" class="form-control" placeholder="e.g., 100 Kg/day" required>
+                  </div>
+                  <div id="qrcode"></div>
+                   <button type="button" class="btnl btn-green" onclick="generateQR(event)">Generate Label</button>
+                     <button class="btnl btn-orange" onclick=" downloadQRCode()">Print</button>
+
+               </div>
+            </form>
+                   <div class="preview-section">
+              <!-- <h3>Label Preview</h3>
               <div class="preview-box" id="previewBox">
              <div id="qrcode"></div>
               <p>Facility: <span id="prevFacility">Facility Name</span></p>
@@ -111,8 +127,52 @@
               <p>Quantity: <span id="prevQuantity">Waste Quantity</span> kg</p>
            </div>
            <button class="btnl btn-green" onclick="generateLabel()">Generate Label</button>
-           <button class="btnl btn-orange" onclick="downloadQR()">Download QR</button>
+           <button class="btnl btn-orange" onclick="downloadQR()">Download QR</button> -->
+                     
+
+                  <!-- <table id="wasteTable" style="display:none;">
+                   <thead>
+                    <tr>
+                    <th>Waste Type</th>
+                   <th>Sub-Type</th>
+                   <th>Quantity (grams)</th>
+                  </tr>
+                 </thead>
+                <tbody id="wasteBody"></tbody>
+               </table>
+               <button class="btn btnl btn-green" onclick="generateQRCode()">Generate QR Code</button>
+                <button class="btnl btn-orange" onclick="downloadQR()">Download QR</button>
+                <div class="preview-box" id="previewBox">
+             <div id="qrcode"></div> -->
+
+                <form action=""class="form-section">
+                  <h3>Operator Details</h3>
+                      <div>
+                    <label for="Operator-name">Name of the Operator</label>
+                    <input type="text" id="Operator"class="form-control"  placeholder="Enter Operator Name" required>
+                  </div>
+                  
+                  <div >
+                    <label  for="address">Address of Operator</label>
+                   <textarea name="address" class="form-control" placeholder="Enter Your address" required></textarea> 
+                  </div>
+                  <div>
+                    <label for="crr-add">Correspondence Address</label>
+                    <textarea name="crr-add" id="crr-add"class="form-control" placeholder="Enter Correspondence address" required></textarea>  
+                  </div>
+                  <div>
+                    <label for="phone-no">Phone Number</label>
+                    <input type="number" id="phone-no" class="form-control" placeholder="+91-98573-XXXXX" required>
+                  </div>
+                <div>
+                    <label for="gps-cord">Location</label>
+                    <input type="text" id="gps-cord" class="form-control" placeholder="Latitude:XX.XXXX , Longitude:YY.YYYY" required>
+                  </div>
+                   <button type="submit" class="submit-btn clr">Submit</button>
+               </div>
+               </div>
          </div>
+               </form>
          </div>
          </div>
       </main>
@@ -213,6 +273,8 @@
     </div>
 
      </footer>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+       <script src="../JS/label.js"></script>
      <script src="../JS/general.js"></script>
     <script src="../JS/script.js"></script>
 </body>

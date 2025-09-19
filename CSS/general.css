@@ -51,7 +51,7 @@ body {
 }
 .grid-form-2-cols{
   grid-template-columns: repeat(2, 1fr);
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 /* .grid--2-cols--60-40 {

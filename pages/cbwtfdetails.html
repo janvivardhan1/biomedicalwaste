@@ -29,7 +29,7 @@
         <!-- <i class="fa-solid fa-chevron-right toggle"></i> -->
         </header>
           <div class="side-menu">
-            <ul class="menu-list">
+           <ul class="menu-list">
                <li><a  class="menu-list-link" href="../pages/cbwtfdash.html"><i class="fa-solid fa-border-all"></i>&nbsp;&nbsp;Dashboard</a></li>
                <li ><a  class="menu-list-link" href="../pages/cbwtfdetails.html"><i class="fa-solid fa-qrcode"></i>&nbsp;&nbsp;CBWTF Details</a></li>
                <!-- <li ><a  class="menu-list-link" href="../pages/wasteCollection.html"><i class="fa-solid fa-calendar-week"></i>&nbsp;&nbsp;Waste Collection</a></li> -->
@@ -41,7 +41,7 @@
        <div class="dsh-main">
          <div class="dsh-nav">
          <div class="dsh-heading">
-            <p>DASHBOARD</p>
+            <p>CBWTF Details</p>
          </div>
           <div class="dsh-heading-side">
               <div class="search-bar" id="search_bar"><input type="text" placeholder="Search Here.......">
@@ -62,39 +62,80 @@
           </div>
           </div>
 
-          <section class="container text-center">
-            <h2 class="heading-secondary center-text dshb-heading"><i class="fa-solid fa-recycle"></i>Total Waste Collected</h2>
-          </section>
-           <div class="container grid grid--4-cols dashboard-cards ">
-            <div  class="yellow-box-cont">
-               <div class="yll-cont"><i class="fa-solid fa-trash-can"></i></div>
-            <div class="feature-desc">
-               <p class="feature-title">Soiled/Expired..etc Waste</p>
-            <p class="feature-title">Total waste <br> 32KG</p>
-           </div>
-      </div>
-         <div  class="red-box-cont ">
-             <div class="red-cont"><i class="fa-solid fa-biohazard"></i></div>
-            <div class="feature-desc">
-               <p class="feature-title">Contaminated Waste</p>
-               <p class="feature-title">Total waste <br> 32KG</p>
+          <div class="container center-text">
+            <span class="subheading">WELCOME TO BIOMEDICAL WASTE MANAGEMENT</span>
+            <h2 class="label-heading">
+            CBWTF DETAILS
+            </h2>
+        </div>
+          <!-- <div class="fclt-dtl-cont "> -->
+               <!-- <h2 class="center-text sub-heading">Enter CBWTF Details</h2> -->
+            <div class="detail-form fclt-dtl-cont form-part-1 ">
+                <form action=""class="form-section ">
+                    <div class="form-grid grid-form-2-cols">
+                     <div>
+                    <label for="applicant-name">CBWTF Name</label>
+                    <input type="text" id="applicant-name" class="form-control" placeholder="Enter CBWTF Name" required>
+                  </div>
+                 <div>
+                    <label for="tel-no">Contact Number</label>
+                    <input type="number" id="cont-no" class="form-control" placeholder="Enter your Contact number" required>
+                  </div>
+                  </div>
+                  <div >
+                    <label for="hcf-add">Address of CBWTF</label>
+                   <textarea name="hcf-add" class="form-control" placeholder="Enter address" required></textarea> 
+                  </div>
+                 <div class="form-grid grid-form-2-cols">
+                  <div>
+                    <label for="Driver-name">Vehicle Driver Name</label>
+                    <input type="text" id="applicant-name" class="form-control" placeholder="Enter Vehicle Driver Name" required>
+                  </div>
+                   <div>
+                    <label for="Vehicle">Vehicle Number</label>
+                    <input type="number" id="Vehicle" class="form-control" placeholder="Enter Vehicle number" required>
+                  </div>
+                  </div>
+                  <div class="form-grid grid-form-2-cols">
+                  <div>
+                  <label for="wasteCategory">Select Waste Category</label>
+                 <select id="wasteCategory" class="form-control">
+                <option value="">--- Select Waste Category ---</option>
+                <option value="yellow">Yellow</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="white">White</option>
+              </select>
+                  </div>
+                  <div>
+                    <label for="wst-qty">Quantity(Kg/Day)</label>
+                    <input type="number" id="wst-qty" class="form-control" placeholder="Enter waste quantity" required>
+                  </div>
+                 </div>
+                  <div>
+                    <label for="gps-cord">Location</label>
+                    <input type="text" id="gps-cord" class="form-control" placeholder="Latitude:XX.XXXX , Longitude:YY.YYYY" required>
+                  </div>
+                 
+                    <h3>Emergency Contact Details</h3>
+                   <div>
+                    <label for="applicant-name"> Name</label>
+                    <input type="text" id="applicant-name" class="form-control" placeholder="Enter  Name" required>
+                  </div>
+                  <div >
+                    <label for="hcf-add">Address </label>
+                   <textarea name="hcf-add" class="form-control" placeholder="Enter address" required></textarea> 
+                  </div>
+                  <div>
+                    <label for="tel-no"> Emergency Contact Number</label>
+                    <input type="number" id="cont-no" class="form-control" placeholder="Enter Contact number" required>
+                  </div>
+                  <button type="submit" class="submit-btn clr">Save</button>
+                  </div>
+               </form>
          </div>
-      </div>
-         <div    class="gray-box-cont ">
-             <div class="gray-cont"><i class="fa-solid fa-syringe"></i></div>
-            <div class="feature-desc">
-               <p class="feature-title">Sharps Waste</p>
-              <p class="feature-title">Total waste <br> 32KG</p>
-           </div>
-      </div>
-         <div class="blue-box-cont">
-             <div class="blue-cont"><i class="fa-solid fa-vial-virus"></i></div>
-            <div class="feature-desc">
-               <p class="feature-title">Glassware/Metallic Waste</p>
-              <p class="feature-title">Total waste <br> 32KG</p>
-           </div>
-      </div>
-     </div>   
+         </div>
+         <!-- </div> -->
        
        </div>
       </main>
