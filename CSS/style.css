@@ -255,6 +255,12 @@
   font-weight: 650;
   margin-bottom: 1.6rem;
 }
+ .total-waste{
+  margin-bottom: 0.5rem;
+   font-size: 2.4rem;
+  color: #0077B6;
+  font-weight: 650;
+ }
 
 /* .feature-text {
   font-size: 1.8rem;

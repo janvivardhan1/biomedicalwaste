@@ -72,12 +72,12 @@
                 <h2>Enter Details</h2>
                 <form action=""class="form-section">
                   <div>
-                    <label for="fclt-name">Facility-name</label>
-                    <input type="text" id="fclt-name" name="fclt-name" class="form-control" placeholder="ABC Hospital" readonly>
+                    <label for="facility-name">Facility-name</label>
+                    <input type="text" id="facility-name" name="facility-name" class="form-control" value="ABC Hospital" readonly>
                   </div>
                   <div >
-                    <label for="fclt-add">Facility Address</label>
-                    <textarea  id="facility-add" name="facility-add"class="form-control" readonly>NH-5,Sector 12,Shimla,HP-171001</textarea>
+                    <label for="facility-add">Facility Address</label>
+                    <textarea  id="facility-add" name="facility-add"class="form-control" readonly>NH-5,Sector-12, Shimla,HP-171001</textarea>
                   </div>
                    <div class="form-grid grid-form-2-cols">
                   <div>
@@ -112,7 +112,11 @@
                     <label for="wst-qty">Quantity(Kg/Day)</label>
                     <input type="number" id="wst-qty" class="form-control" placeholder="e.g., 100 Kg/day" required>
                   </div>
-                  <div id="qrcode"></div>
+                  <div class="qr-section">
+                     <div id="qrcode"></div>
+                     <div class="qr-details" id="qrdata"></div>
+                  </div>
+                  <div class="message" id="msg"> Scan the QR Code to view details</div>
                    <button type="button" class="btnl btn-green" onclick="generateQR(event)">Generate Label</button>
                      <button class="btnl btn-orange" onclick=" downloadQRCode()">Print</button>
 
@@ -201,7 +205,7 @@
                   <li><a class="footer-link" href="#">Terms & Conditions</a></li>
                </ul>
             </nav>
-             <div class="address-col">
+            <div class="address-col">
                <p class="footer-heading">Contact us</p>
                <address class="contacts">
                   <p class="address"><i class="fa-solid fa-location-dot"></i>&nbsp;
@@ -218,13 +222,13 @@
                </address>
             </div>
             </div>
-           <div class="footer-section">
+         <div class="footer-section">
             <p class="footer-heading">Our Location</p>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3439.803227116451!2d77.6431526112076!3d30.4416795995351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f23824fa916db%3A0x67c9e32f58755378!2sIndian%20Institute%20Of%20Management%E2%80%93Sirmaur%20(IIM%E2%80%93Sirmaur)!5e0!3m2!1sen!2sin!4v1754194713188!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
          </div>
       </div>
       </div>
-       <div class="footer-bottom ">
+      <div class="footer-bottom ">
          <p class="container copyright">&copy; 2025 EarthKraft. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
       <ul class="social-links container">
                   <li>
@@ -248,7 +252,7 @@
                            >
                      </a>
                   </li>
-                   <li>
+                  <li>
                      <a class="footer-link" href="#"
                         >
                         <ion-icon class="social-icon" name="logo-linkedin"></ion-icon

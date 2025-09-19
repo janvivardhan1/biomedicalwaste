@@ -69,33 +69,22 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
 // load captcha on page load
 window.onload = generateCaptcha;
 
+//login
+document.getElementById("loginBtn").addEventListener("click", function (e) {
+  e.preventDefault(); // prevent form submit refresh
 
-//label generator
-// function generateLabel() {
-// document.getElementById('prevFacility').innerText = document.getElementById('fclt-name').value;
-// document.getElementById('prevWaste').innerText = document.getElementById('wst-ctg').value;
-// document.getElementById('prevQuantity').innerText = document.getElementById('wst-qty').value;
+  let userType = document.getElementById("user-type").value; // get dropdown value
 
+  if (userType === "HCF") {
+    window.location.href = "../pages/dashboard.html";
+  } 
+  else if (userType === "CBWTF") {
+    window.location.href = "../pages/cbwtfdash.html";
+  } 
+  else {
+    alert("Please select a valid User Type!");
+  }
+});
 
-// let qrText = `Facility: ${document.getElementById('fclt-name').value}\nWaste: ${document.getElementById('wst-ctg').value}\nQuantity: ${document.getElementById('wst-ctg').value} kg`;
-
-
-// document.getElementById('qrcode').innerHTML = "";
-// new QRCode(document.getElementById('qrcode'), qrText);
-// }
-
-// function downloadQR() {
-//   // Find QR code inside the div
-//   let qrImg = document.querySelector("#qrcode img"); 
-//   // } else 
-//     if (qrImg) {
-//     let link = document.createElement("a");
-//     link.download = "qrcode.png";
-//     link.href = qrImg.src;
-//     link.click();
-//   } else {
-//     alert("QR code not found!");
-//   }
-// }
 
 

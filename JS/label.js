@@ -79,15 +79,9 @@
     white: "#000000b9"
   }
 
-    function generateQR(event) {
+  function generateQR(event) {
   if (event) event.preventDefault(); // stops form reload
-
-  // your QR generation code here
-// }
-    
-//     // Generate QR Code
-//   function generateQR() {
-  const facilityName = document.getElementById("fclt-name").value;
+  const facilityName = document.getElementById("facility-name").value;
   const facilityAddress = document.getElementById("facility-add").value;
   const date = document.getElementById("dateField").value;
   const hcfNumber = document.getElementById("hcf-num").value;
@@ -128,6 +122,19 @@ const qrData = JSON.stringify({
     colorLight: "#ffffff",
     correctLevel: QRCode.CorrectLevel.L   // <--- allows more data
   });
+   // Display details on right side (formatted)
+  let detailsHTML = 
+    `<p><strong>Facility:</strong> ${facilityName}</p>
+    <p><strong>Address:</strong> ${facilityAddress}</p>
+    <p><strong>Date:</strong> ${date}</p>
+    <p><strong>HCF No:</strong> ${hcfNumber}</p>
+    <p><strong>Waste Category:</strong> ${wasteCat}</p>
+    <p><strong>Sub-Category:</strong> ${subCat}</p>
+    <p><strong>Quantity:</strong> ${quantity} Kg/Day</p>`;
+  document.getElementById("qrdata").innerHTML = detailsHTML;
+
+  // Show bottom message
+  document.getElementById("msg").style.display = "block";
 }
 
 //download qr code
